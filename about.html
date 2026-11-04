@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sanhee Lee · BE MY AURA</title>
+<meta name="description" content="Resume of Lee Sanhee, brand and visual designer based in Daejeon, Korea. Open to remote roles.">
+<meta name="theme-color" content="#E6EBEE">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sanhee Lee — Resume">
+<meta property="og:description" content="Resume of Lee Sanhee, brand and visual designer based in Daejeon, Korea. Open to remote roles.">
+<meta property="og:url" content="https://portfolio.auraseoul.kr/about.html">
+<meta property="og:image" content="https://portfolio.auraseoul.kr/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://portfolio.auraseoul.kr/about.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230D1114'/%3E%3Ccircle cx='16' cy='16' r='5' fill='%23C8261B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;600&family=Instrument+Serif:ital@0;1&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Doto:wght@700;900&display=swap">
+<style>
+/* BE MY AURA — shared look for the pages after the hero: a cold, pale specimen archive. Single light look by design. */
+:root {
+  --paper: #E6EBEE;
+  --paper-2: #F1F4F5;
+  --void: #B9C6CE;
+  --ink: #0D1114;
+  --ink-muted: #4F5A61;
+  --line: #A9B4BB;
+  --line-soft: #CBD3D8;
+  --signal: #C8261B;
+  --night: #0D1114;
+  --night-ink: #E8EEF1;
+  --f-display: "Anton", "Bebas Neue", Impact, "Arial Narrow", sans-serif;
+  --f-serif: "Instrument Serif", "Cormorant Garamond", Georgia, serif;
+  --f-sans: "IBM Plex Sans KR", "Pretendard", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", "JetBrains Mono", ui-monospace, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+:lang(ko) body, html[lang="ko"] body { word-break: keep-all; overflow-wrap: break-word; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body.page { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--f-sans); font-size: 16px; line-height: 1.75; overflow-x: hidden; }
+body.page::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--paper); }
+.wrap { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+@media (min-width: 900px) { .wrap { padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); } }
+.meta { font-family: var(--f-mono); font-size: 11px; line-height: 16px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); }
+.label { font-family: var(--f-mono); font-size: 13px; line-height: 18px; letter-spacing: .06em; text-transform: uppercase; font-weight: 500; }
+.sig { color: var(--signal); }
+.serif { font-family: var(--f-serif); font-style: italic; font-weight: 400; letter-spacing: 0; }
+a { color: inherit; }
+:focus-visible { outline: 1px solid var(--signal); outline-offset: 3px; }
+
+/* sticky navigation for the sub pages */
+.nav { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-block: 16px; background: color-mix(in srgb, var(--paper) 90%, transparent); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line-soft); }
+.nav .brand { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+.nav .brand i { width: 7px; height: 7px; border-radius: 999px; background: var(--signal); }
+.nav nav { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: flex-end; }
+.nav nav a { text-decoration: none; }
+.nav nav a:hover, .nav nav a[aria-current="page"] { color: var(--signal); }
+
+.lang { display: inline-flex; border: 1px solid var(--line); background: none; padding: 0; cursor: pointer; font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; }
+.lang span { padding: 3px 7px; color: var(--ink-muted); }
+.lang span.on { background: var(--ink); color: var(--paper); }
+
+.btn { display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--ink); padding: 11px 18px; font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); text-decoration: none; background: transparent; cursor: pointer; transition: background-color .15s linear, color .15s linear; }
+.btn:hover { background: var(--ink); color: var(--paper); }
+.btn.solid { background: var(--ink); color: var(--paper); }
+.btn.solid:hover { background: var(--signal); border-color: var(--signal); }
+
+.display { font-family: var(--f-display); font-weight: 400; text-transform: uppercase; line-height: .9; margin: 0; text-wrap: balance; }
+.lead { font-size: clamp(17px, 1.6vw, 20px); line-height: 1.7; max-width: 38em; margin: 0; }
+.muted { color: var(--ink-muted); }
+
+/* spec table: label / value rows */
+.spec { margin: 0; border-top: 1px solid var(--ink); }
+.spec > div { display: grid; grid-template-columns: minmax(96px, 150px) minmax(0, 1fr); gap: 16px; padding-block: 11px; border-bottom: 1px solid var(--line-soft); }
+.spec dt { font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-muted); padding-top: 3px; }
+.spec dd { margin: 0; min-width: 0; }
+
+/* section header with a rule */
+.sec-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; border-bottom: 1px solid var(--ink); padding-bottom: 10px; margin-bottom: 32px; flex-wrap: wrap; }
+
+/* something the owner still has to supply */
+.todo { border: 1px dashed var(--line); padding: 14px 16px; color: var(--ink-muted); font-size: 14px; line-height: 1.6;
+  background: repeating-linear-gradient(45deg, transparent 0 9px, color-mix(in srgb, var(--line) 16%, transparent) 9px 10px); }
+.todo::before { content: "TO ADD · "; font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; color: var(--signal); }
+
+/* image slot with crosshair */
+.slot { position: relative; display: grid; place-items: center; background: linear-gradient(180deg, var(--paper-2), var(--line-soft)); color: var(--ink-muted); overflow: hidden; }
+.slot::before, .slot::after { content: ""; position: absolute; background: color-mix(in srgb, var(--ink) 18%, transparent); }
+.slot::before { left: 50%; top: 0; bottom: 0; width: 1px; }
+.slot::after { top: 50%; left: 0; right: 0; height: 1px; }
+.slot span { position: relative; z-index: 1; background: var(--paper-2); padding: 6px 10px; border: 1px solid var(--line); font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; text-align: center; max-width: 80%; }
+
+.foot { border-top: 1px solid var(--line); padding-block: 32px 48px; display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: flex-end; }
+.code { height: 36px; width: 200px; max-width: 100%; background: repeating-linear-gradient(90deg, var(--ink) 0 1px, transparent 1px 3px, var(--ink) 3px 5px, transparent 5px 6px, var(--ink) 6px 7px, transparent 7px 11px); }
+
+.nav .brand { white-space: nowrap; }
+@media (max-width: 640px) {
+  .nav nav { gap: 10px; }
+  .nav .label { font-size: 12px; letter-spacing: .04em; }
+  .spec > div { grid-template-columns: 1fr; gap: 2px; }
+}
+
+/* About = a resume told as a camera move.
+   1  a campaign poster: the figure reaches out of the frame in front of SANHEE LEE
+   2  the scroll pushes through the hand, onto the face, into the left eye and through the pupil
+   3  out of the pupil into the light: a short analysis of the subject, then the record */
+body.about { background: var(--paper); }
+:root { --f-dot: "Doto", "IBM Plex Mono", ui-monospace, monospace; }
+
+/* ───────── 1 · poster ───────── */
+.intro { position: relative; height: 560svh; }
+.pin { position: sticky; top: 0; height: 100svh; overflow: hidden; }
+.poster { --mx: 0; --my: 0; --p1: 0; --p2: 0; --pf: 0; --fl: 0;
+  position: absolute; inset: 0; background: var(--paper); opacity: calc(1 - var(--pf)); }
+.poster::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(var(--line-soft) 1px, transparent 1px) 0 0 / 100% 25%, linear-gradient(90deg, var(--line-soft) 1px, transparent 1px) 0 0 / 12.5% 100%; opacity: .55; }
+
+.ty { position: absolute; inset: 0; display: grid; align-content: center; padding-inline: 2vw; margin: 0;
+  font-family: var(--f-display); font-weight: 400; text-transform: uppercase; line-height: .8; letter-spacing: -.01em; color: var(--ink);
+  transform: translate3d(calc(var(--mx) * -16px), calc(var(--my) * -12px), 0); pointer-events: none; }
+.ty .row { display: flex; align-items: flex-start; white-space: nowrap; font-size: var(--fs, 26vw); }
+.ty .row > span { display: block; }
+.ty .r1 { transform: translateX(calc(var(--p1) * -9vw)) scaleY(1.22); transform-origin: left center; }
+.ty .r2 { justify-content: flex-end; transform: translateX(calc(var(--p1) * 9vw)) scaleY(1.22); transform-origin: right center; margin-top: .1em; }
+.ty-red { color: transparent; -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(rgba(200, 38, 27, .9), rgba(200, 38, 27, .9)), url(assets/sanhee-kneel.jpg);
+  background-size: cover, cover; background-position: center; background-blend-mode: multiply;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-mask:
+    linear-gradient(#000 0 0) calc(30% + var(--mx) * 3%) calc(14% + var(--p1) * 20%) / 16% 34% no-repeat,
+    linear-gradient(#000 0 0) calc(56% - var(--mx) * 2%) 40% / 9% 22% no-repeat,
+    linear-gradient(#000 0 0) calc(84% + var(--mx) * 2%) calc(78% - var(--p1) * 14%) / 13% 30% no-repeat;
+          mask:
+    linear-gradient(#000 0 0) calc(30% + var(--mx) * 3%) calc(14% + var(--p1) * 20%) / 16% 34% no-repeat,
+    linear-gradient(#000 0 0) calc(56% - var(--mx) * 2%) 40% / 9% 22% no-repeat,
+    linear-gradient(#000 0 0) calc(84% + var(--mx) * 2%) calc(78% - var(--p1) * 14%) / 13% 30% no-repeat; }
+
+.side { position: absolute; top: 50%; font-family: var(--f-display); font-size: clamp(18px, 2.2vw, 34px); letter-spacing: .02em; line-height: 1; white-space: nowrap; color: var(--ink); }
+.side.l { left: 1.2vw; transform: translate3d(calc(var(--mx) * -8px), -50%, 0) rotate(180deg); writing-mode: vertical-rl; }
+.side.r { right: 1.2vw; transform: translate3d(calc(var(--mx) * -8px), -50%, 0); writing-mode: vertical-rl; }
+.tag { position: absolute; font-family: var(--f-mono); font-weight: 600; letter-spacing: .04em; color: var(--ink); }
+.tag.no { left: 4.6vw; bottom: 9svh; font-size: clamp(16px, 1.6vw, 24px); }
+.tag.name { right: 5vw; bottom: 9svh; font-family: var(--f-serif); font-style: italic; font-weight: 400; font-size: clamp(26px, 2.6vw, 40px); }
+.tag.top { left: 4.6vw; top: calc(env(safe-area-inset-top, 0px) + 74px); font-size: 11px; font-weight: 500; letter-spacing: .08em; color: var(--ink); background: var(--paper); padding: 3px 7px; z-index: 2; }
+.tag.top b { color: var(--signal); font-weight: 600; }
+/* small type that crosses the black letters inverts against whatever is behind it */
+.side, .tag.no, .tag.name, .micro, .cue { color: #fff !important; mix-blend-mode: difference; }
+.cue b { color: #fff !important; }
+.micro { position: absolute; margin: 0; width: min(22vw, 300px); font-family: var(--f-mono); font-size: 9px; line-height: 1.45; letter-spacing: .02em; text-align: justify; color: var(--ink); opacity: .82;
+  transform: translate3d(calc(var(--mx) * -10px), calc(var(--my) * -6px - var(--p1) * 40px), 0); }
+.micro.a { left: 4.6vw; bottom: 15svh; }
+.micro.b { right: 5vw; top: calc(env(safe-area-inset-top, 0px) + 74px); width: min(18vw, 240px); }
+
+.inset { position: absolute; margin: 0; background: #fff; padding: 5px; box-shadow: 0 10px 30px rgba(13, 17, 20, .14);
+  transform: translate3d(calc(var(--mx) * -26px), calc(var(--my) * -18px - var(--p1) * 90px), 0) rotate(var(--rot, 0deg)); }
+.inset img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.inset figcaption { position: absolute; left: 5px; bottom: -16px; font-family: var(--f-mono); font-size: 9px; letter-spacing: .08em; color: var(--ink-muted); }
+.inset.i1 { left: 7vw; top: 24svh; width: 12vw; aspect-ratio: 4 / 5; --rot: -2deg; }
+.inset.i2 { right: 6.5vw; top: 44svh; width: 11vw; aspect-ratio: 4 / 5; --rot: 1.5deg; }
+.inset.i2 img { object-position: 50% 30%; }
+
+.fig { position: absolute; left: 53%; bottom: -3svh; height: 101svh; aspect-ratio: 1260 / 1800;
+  transform: translate3d(calc(-50% + var(--mx) * 12px), calc(var(--my) * 8px + var(--fl) * 5px), 0) scale(calc(1 + var(--p1) * .12 + var(--p2) * .7));
+  transform-origin: 45% 75%; will-change: transform; }
+.fig img { position: absolute; inset: 0; width: 100%; height: 100%; user-select: none; -webkit-user-drag: none; }
+.fig .body { filter: drop-shadow(16px 26px 30px rgba(13, 17, 20, .2)); }
+/* the reaching hand is a second copy masked to the palm, so it can sit closer to the viewer */
+.fig .hand { -webkit-mask: radial-gradient(ellipse 33% 25% at 41% 74%, #000 72%, transparent 100%); mask: radial-gradient(ellipse 33% 25% at 41% 74%, #000 72%, transparent 100%);
+  transform: translate3d(calc(var(--mx) * 26px), calc(var(--my) * 18px), 0) scale(calc(1 + var(--p1) * .5 + var(--p2) * var(--p2) * 10)); transform-origin: 44% 76%; will-change: transform; }
+.sq { position: absolute; width: var(--s, 64px); aspect-ratio: 1; border: 2px solid var(--signal); translate: -50% -50%;
+  transform: translate3d(calc(var(--mx) * var(--d, 20px)), calc(var(--my) * var(--d, 20px)), 0) rotate(calc(var(--p1) * var(--r, 10deg))) scale(calc(1 + var(--p1) * .25)); }
+.sq span { position: absolute; left: -2px; top: calc(100% + 4px); font-family: var(--f-mono); font-size: 9px; letter-spacing: .08em; color: var(--signal); white-space: nowrap; }
+.sq.eye { left: 51.5%; top: 34.5%; --s: 5.2%; --d: 8px; --r: 0deg; animation: lock 2.4s steps(2, jump-none) infinite; }
+@keyframes lock { 50% { border-color: rgba(200, 38, 27, .3); } }
+.sq.c { left: 63%; top: 50%; --s: 9%; --d: 30px; --r: -14deg; }
+.sq.h { left: 30%; top: 68%; --s: 15%; --d: 44px; --r: 18deg; }
+.cue { position: absolute; left: 50%; bottom: 3svh; transform: translateX(-50%); font-family: var(--f-mono); font-size: 11px; letter-spacing: .12em; color: var(--ink); opacity: calc(1 - var(--p1) * 5); white-space: nowrap; }
+.cue b { color: var(--signal); font-weight: 500; }
+
+/* ───────── 2 · into the eye ───────── */
+#eye { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; display: block; background: var(--paper); }
+.eye-fb { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform-origin: 35% 31%; display: none; }
+.scope { position: absolute; inset: 0; pointer-events: none; opacity: 0; color: #fff; mix-blend-mode: difference; font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; }
+.scope .x { position: absolute; left: 50%; top: 50%; width: 46px; height: 46px; translate: -50% -50%; }
+.scope .x::before, .scope .x::after { content: ""; position: absolute; background: currentColor; }
+.scope .x::before { left: 50%; top: 0; bottom: 0; width: 1px; }
+.scope .x::after { top: 50%; left: 0; right: 0; height: 1px; }
+.scope .ring { position: absolute; left: 50%; top: 50%; width: 30vmin; aspect-ratio: 1; translate: -50% -50%; border: 1px solid currentColor; border-radius: 50%; opacity: .5; }
+.scope .br { position: absolute; width: 22px; height: 22px; border: 1px solid currentColor; }
+.scope .br.a { left: 5vw; top: calc(env(safe-area-inset-top, 0px) + 80px); border-right: 0; border-bottom: 0; }
+.scope .br.b { right: 5vw; top: calc(env(safe-area-inset-top, 0px) + 80px); border-left: 0; border-bottom: 0; }
+.scope .br.c { left: 5vw; bottom: 5svh; border-right: 0; border-top: 0; }
+.scope .br.d { right: 5vw; bottom: 5svh; border-left: 0; border-top: 0; }
+.scope .rd { position: absolute; display: grid; gap: 4px; }
+.scope .rd.a { left: calc(5vw + 34px); top: calc(env(safe-area-inset-top, 0px) + 82px); }
+.scope .rd.b { right: calc(5vw + 34px); bottom: calc(5svh + 2px); text-align: right; }
+.scope .bar { width: 160px; height: 4px; border: 1px solid currentColor; }
+.scope .bar i { display: block; height: 100%; width: 0; background: currentColor; }
+.enter { position: absolute; left: 50%; top: 50%; translate: -50% -50%; margin: 0; text-align: center; color: var(--ink); opacity: 0; pointer-events: none; display: grid; gap: 10px; }
+.enter b { font-family: var(--f-dot); font-weight: 900; font-size: clamp(28px, 4vw, 56px); letter-spacing: .04em; line-height: 1; }
+
+/* ───────── 3 · analysis ───────── */
+.hud { position: relative; background: var(--paper); color: var(--ink); overflow: clip; }
+.hud::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(var(--line-soft) 1px, transparent 1px) 0 0 / 100% 25svh, linear-gradient(90deg, var(--line-soft) 1px, transparent 1px) 0 0 / 12.5% 100%; opacity: .55; }
+.hud a { color: inherit; }
+.hl-label { font-family: var(--f-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-muted); display: flex; gap: 8px; align-items: center; }
+.hl-label::after { content: ""; flex: 1; height: 6px; background: repeating-linear-gradient(-45deg, rgba(13, 17, 20, .35) 0 1px, transparent 1px 4px); }
+.dot { font-family: var(--f-dot); font-weight: 900; letter-spacing: .02em; line-height: .95; }
+
+.ana { position: relative; height: 330svh; }
+.ana-pin { --r: 0; --c: 0; --mx: 0; --my: 0; --b: 0; --h: 0; position: sticky; top: 0; height: 100svh; overflow: hidden; }
+.ana-top { position: absolute; left: 3vw; right: 3vw; top: calc(env(safe-area-inset-top, 0px) + 68px); display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--ink); padding-bottom: 6px; font-family: var(--f-mono); font-size: 10px; letter-spacing: .1em; color: var(--ink-muted); }
+.ana-top b { color: var(--signal); font-weight: 500; }
+.ana-name { position: absolute; left: 3vw; top: calc(env(safe-area-inset-top, 0px) + 96px); margin: 0; font-size: clamp(40px, 5.4vw, 88px); color: var(--ink); }
+.ana-name small { display: block; margin-top: .4em; font-family: var(--f-sans); font-weight: 600; font-size: clamp(14px, 1.2vw, 18px); letter-spacing: .04em; color: var(--ink-muted); }
+.ana-frame { position: absolute; left: 50%; bottom: 5svh; height: 70svh; width: min(40vw, 70svh * .82); translate: -50% 0; border: 1px solid var(--line); display: grid; justify-items: center; align-items: end; }
+.ana-frame svg.xb { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.ana-frame .hd { position: absolute; width: 9px; height: 9px; border: 1px solid var(--ink); background: var(--paper); translate: -50% -50%; z-index: 2; }
+/* the figure is taller than its frame: the raised hand breaks out of the top, the shoes over the bottom edge */
+.fig3d { position: absolute; left: 50%; bottom: -4%; height: 130%; aspect-ratio: 1192 / 1900; translate: -50% 0; z-index: 1; will-change: transform;
+  transform: perspective(1400px) translate3d(calc(var(--mx) * 18px), calc(var(--my) * 10px + var(--b) * 5px), 0) rotateY(calc(var(--mx) * 8deg)) rotateX(calc(var(--my) * -4deg)) scale(calc(.9 + var(--r) * .1));
+  transform-origin: 50% 88%; }
+.subj { position: absolute; inset: 0; clip-path: inset(-14% -30% calc((1 - var(--r)) * 114% - 14%) -30%); }
+.subj img { position: absolute; inset: 0; width: 100%; height: 100%; user-select: none; -webkit-user-drag: none; }
+.subj .body { filter: drop-shadow(18px 30px 32px rgba(13, 17, 20, .22)); }
+.subj .pop { filter: drop-shadow(12px 22px 18px rgba(13, 17, 20, .3)); will-change: transform; }
+.subj .pa { -webkit-mask: radial-gradient(ellipse 19% 12% at 53% 73%, #000 70%, transparent 100%); mask: radial-gradient(ellipse 19% 12% at 53% 73%, #000 70%, transparent 100%);
+  transform: translate3d(calc(var(--mx) * 12px), calc(var(--my) * 9px), 0) scale(calc(1 + var(--h) * .12)); transform-origin: 53% 73%; }
+.subj .pb { -webkit-mask: radial-gradient(ellipse 11% 7% at 85% 5%, #000 70%, transparent 100%); mask: radial-gradient(ellipse 11% 7% at 85% 5%, #000 70%, transparent 100%);
+  transform: translate3d(calc(var(--mx) * 10px), calc(var(--my) * 7px), 0) scale(calc(1 + var(--h) * .08)); transform-origin: 85% 5%; }
+.fig3d .sweep { position: absolute; left: -8%; right: -8%; height: 2px; top: calc(var(--r) * 114%); background: var(--signal); opacity: calc((1 - var(--r)) * 4); pointer-events: none; z-index: 3; }
+.subj .scan { position: absolute; left: -12%; right: -12%; height: 1px; top: 0; background: var(--signal); animation: scan 6s linear infinite; opacity: calc(var(--r) * .45); }
+@keyframes scan { from { top: 0; } to { top: 100%; } }
+.node { --n: 0; position: absolute; width: 13px; height: 13px; border: 2px solid var(--signal); background: var(--paper); translate: -50% -50%; z-index: 2; opacity: var(--n); transform: scale(calc(.3 + var(--n) * .7)); }
+.node::after { content: ""; position: absolute; inset: 2px; background: var(--ink); }
+.node em { position: absolute; left: 16px; top: -15px; font-style: normal; font-family: var(--f-mono); font-size: 10px; font-weight: 500; color: var(--signal); }
+.wires { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 1; overflow: visible; }
+.wires path { fill: none; stroke: var(--ink); stroke-width: 1; }
+.calls { margin: 0; padding: 0; list-style: none; }
+.call { --k: 0; position: absolute; width: min(24vw, 320px); display: grid; gap: 6px; z-index: 2;
+  clip-path: inset(0 calc((1 - var(--k)) * 100%) 0 0); }
+.call .k { display: flex; justify-content: space-between; gap: 8px; border-top: 1px solid var(--ink); padding-top: 6px; font-family: var(--f-mono); font-size: 10px; letter-spacing: .1em; color: var(--ink-muted); }
+.call .k i { font-style: normal; color: var(--signal); }
+.call b { font-size: clamp(18px, 1.6vw, 25px); font-weight: 600; line-height: 1.25; letter-spacing: -.01em; color: var(--ink); hyphens: none; }
+.ana-bot { position: absolute; left: 3vw; right: 3vw; bottom: 3svh; display: flex; justify-content: space-between; align-items: end; gap: 16px; pointer-events: none; opacity: var(--c); }
+.ana-bot > * { pointer-events: auto; }
+.contact { margin: 0; padding: 0; list-style: none; display: grid; gap: 3px; font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .04em; }
+.contact a { text-decoration: none; border-bottom: 1px solid var(--line); }
+.contact a:hover { color: var(--signal); border-color: var(--signal); }
+.copy { background: none; border: 1px solid var(--line); color: var(--ink-muted); font: inherit; font-size: 9px; padding: 0 5px; margin-left: 6px; cursor: pointer; letter-spacing: .08em; }
+.copy:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.pdf { display: grid; place-items: center; text-align: center; gap: 2px; border: 1px solid var(--ink); padding: 8px 16px; text-decoration: none; font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; background: var(--paper); color: var(--ink); }
+.pdf b { font-family: var(--f-dot); font-size: 22px; font-weight: 900; }
+.pdf:hover { background: var(--ink); color: var(--paper); }
+
+/* the short record under the analysis */
+.record { position: relative; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 28px 40px; padding: 72px 3vw 24px; border-top: 1px solid var(--ink); }
+.rec { display: grid; gap: 12px; align-content: start; min-width: 0; }
+.exp { margin: 0; padding: 0; list-style: none; display: grid; }
+.exp li { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 2px 14px; padding: 8px 0; border-bottom: 1px solid var(--line-soft); font-size: 14px; line-height: 1.45; }
+.exp .d { font-family: var(--f-mono); font-size: 11px; color: var(--ink-muted); padding-top: 2px; font-variant-numeric: tabular-nums; }
+.exp b { font-weight: 600; }
+.exp .o { color: var(--ink-muted); font-size: 13px; }
+.exp li:first-child b::after { content: " ●"; color: var(--signal); font-size: 10px; vertical-align: 2px; }
+.mini { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; font-size: 14px; line-height: 1.5; }
+.mini span { display: block; font-family: var(--f-mono); font-size: 11px; color: var(--ink-muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 5px; }
+.chips span { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .03em; border: 1px solid var(--line); padding: 3px 8px; background: var(--paper-2); }
+.chips.fill span { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.ai { position: relative; margin: 0; padding: 20px 3vw 56px; max-width: 64em; font-size: 13px; line-height: 1.7; color: var(--ink-muted); }
+
+/* small screens: no pin, the figure first and the six readings listed under it */
+.ana.static { height: auto; }
+.ana.static .ana-pin { position: relative; height: auto; overflow: visible; display: grid; grid-template-columns: minmax(0, 1fr); gap: 22px; padding: calc(env(safe-area-inset-top, 0px) + 70px) 16px 32px; --r: 1; --c: 1; }
+.ana.static .ana-top, .ana.static .ana-name, .ana.static .ana-frame, .ana.static .ana-bot { position: relative; left: auto; right: auto; top: auto; bottom: auto; translate: none; }
+.ana.static .ana-frame { width: min(100%, 560px); height: auto; aspect-ratio: 3 / 4; justify-self: center; margin-top: 30%; }
+.ana.static .ana-pin { --h: .5; }
+.ana.static .calls { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 16px; }
+.ana.static .call { position: relative; width: auto; --k: 1; }
+.ana.static .call b { font-size: 16px; }
+.ana.static .node { --n: 1; }
+.ana.static .wires { display: none; }
+.ana.static .ana-bot { flex-wrap: wrap; }
+@media (max-width: 980px) { .record { grid-template-columns: 1fr 1fr; } .record .rec:first-child { grid-column: 1 / -1; } }
+@media (max-width: 560px) { .ana.static .calls { grid-template-columns: 1fr; } .record { grid-template-columns: 1fr; padding-top: 48px; } .exp li { grid-template-columns: 96px minmax(0, 1fr); } }
+
+/* ───────── narrower screens ───────── */
+@media (max-width: 760px) and (orientation: portrait) {
+  .ty { align-content: center; padding-top: 6svh; }
+  .ty .r1 { flex-direction: column; transform: translateX(calc(var(--p1) * -9vw)) scaleY(1.08); }
+  .ty .r1 > span + span { margin-top: .1em; }
+  .ty .r2 { justify-content: flex-start; transform: translateX(calc(var(--p1) * 9vw)) scaleY(1.08); }
+  .fig { height: 66svh; left: 52%; bottom: 0; }
+  .inset.i1 { left: auto; right: 4vw; top: 15svh; width: 24vw; }
+  .inset.i2, .micro, .side { display: none; }
+  .micro.a { width: 44vw; bottom: auto; top: calc(env(safe-area-inset-top, 0px) + 96px); left: 4vw; font-size: 8px; }
+  .tag.no { bottom: 7svh; left: 4vw; font-size: 14px; } .tag.name { bottom: 7svh; right: 4vw; font-size: 24px; }
+  .tag.top { top: calc(env(safe-area-inset-top, 0px) + 72px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro { height: auto; }
+  .pin { position: relative; }
+  #eye, .scope, .enter { display: none; }
+  .sq.eye, .subj .scan { animation: none; }
+  .fig3d { transform: none; }
+}
+</style>
+</head>
+<body class="page about">
+<header class="nav wrap" id="nav">
+  <a class="brand label" href="index.html"><i></i>BE MY AURA</a>
+  <nav class="label" aria-label="Main">
+    <a href="about.html" aria-current="page">ABOUT</a>
+    <a href="work.html">WORK</a>
+    <a href="connection.html">CONNECTION</a>
+  </nav>
+</header>
+
+<main>
+<section class="intro" id="intro" aria-label="Sanhee Lee — resume">
+  <div class="pin">
+    <div class="poster" id="poster">
+      <h1 class="ty ty-ink" aria-label="Sanhee Lee"><span class="row r1" aria-hidden="true"><span>SAN</span><span>HEE</span></span><span class="row r2" aria-hidden="true"><span>LEE</span></span></h1>
+      <div class="ty ty-red" aria-hidden="true"><span class="row r1"><span>SAN</span><span>HEE</span></span><span class="row r2"><span>LEE</span></span></div>
+
+      <span class="side l" aria-hidden="true">BRAND &amp; VISUAL DESIGNER</span>
+      <span class="side r" aria-hidden="true">RESUME — 2026 — DAEJEON, KR</span>
+      <span class="tag top"><b>SPEC-000</b> · SUBJECT · LEE SANHEE</span>
+      <p class="micro a" aria-hidden="true">I design brand identities and carry them into live websites, from first concept to launch. AI tools alongside hands-on design, always disclosed. Brand identity / Visual systems / Brand guidelines / Art direction / Web design / Landing pages / Responsive layout. Figma / Blender / Midjourney / ChatGPT / Claude / Gemini / Vercel / Supabase. Korean native, English and Japanese conversational. Open to remote.</p>
+      <p class="micro b" aria-hidden="true">AURA SEOUL (self-employed), freelance brand &amp; web designer since 2026.09. Monochrome, editorial identities; responsive sites and landing pages from brief to launch; generative AI for mood boards, concepts and pre-visualization.</p>
+      <figure class="inset i1"><img src="assets/sanhee-kneel.jpg" alt=""><figcaption>VIEW 02</figcaption></figure>
+      <figure class="inset i2"><img src="assets/sanhee-face.jpg" alt=""><figcaption>VIEW 03</figcaption></figure>
+
+      <div class="fig" id="fig">
+        <img class="body" src="assets/sanhee-reach.webp" alt="Lee Sanhee reaching toward the lens (own photo, restyled with AI)" fetchpriority="high">
+        <img class="hand" src="assets/sanhee-reach.webp" alt="" aria-hidden="true">
+        <span class="sq eye"><span>IRIS.L · LOCK</span></span>
+        <span class="sq c"><span>C-SPINE</span></span>
+        <span class="sq h"><span>MANUS.R</span></span>
+      </div>
+      <span class="tag no" aria-hidden="true">NO.000 / 2026</span>
+      <span class="tag name" aria-hidden="true">Lee Sanhee</span>
+      <span class="cue">SCROLL <b>—</b> INTO THE EYE ↓</span>
+    </div>
+
+    <canvas id="eye" aria-hidden="true"></canvas>
+    <img class="eye-fb" id="eyeFb" src="assets/sanhee-face.jpg" alt="" aria-hidden="true">
+    <div class="scope" id="scope" aria-hidden="true">
+      <span class="br a"></span><span class="br b"></span><span class="br c"></span><span class="br d"></span>
+      <span class="ring"></span><span class="x"></span>
+      <div class="rd a"><span>TARGET · IRIS.L</span><span id="mag">MAG ×1.0</span><span>SUBJECT 000</span></div>
+      <div class="rd b"><span id="phase">FOCUS LOCK</span><div class="bar"><i id="bar"></i></div></div>
+    </div>
+    <p class="enter" id="enter" aria-hidden="true"><span class="meta">ENTERING</span><b>SUBJECT 000</b></p>
+  </div>
+</section>
+
+<section class="hud" id="hud" aria-labelledby="hud-title">
+  <div class="ana" id="ana">
+    <div class="ana-pin" id="anaPin">
+      <div class="ana-top" aria-hidden="true"><span><b>SUBJECT 000</b> · ANALYSIS</span><span id="anaPct">SCAN 000%</span></div>
+      <h2 class="ana-name dot" id="hud-title">LEE<br>SANHEE<small>Brand &amp; Visual Designer · Daejeon, KR</small></h2>
+      <div class="ana-frame" id="anaFrame">
+        <svg class="xb" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 100 100M100 0 0 100" stroke="rgba(13,17,20,.22)" stroke-width=".15" vector-effect="non-scaling-stroke" fill="none"/></svg>
+        <span class="hd" style="left:0;top:0"></span><span class="hd" style="left:50%;top:0"></span><span class="hd" style="left:100%;top:0"></span>
+        <span class="hd" style="left:0;top:50%"></span><span class="hd" style="left:100%;top:50%"></span>
+        <span class="hd" style="left:0;top:100%"></span><span class="hd" style="left:50%;top:100%"></span><span class="hd" style="left:100%;top:100%"></span>
+        <div class="fig3d" id="fig3d">
+          <div class="subj" id="subj">
+            <img class="body" src="assets/sanhee-pose.webp" alt="Lee Sanhee, full body, in a twisting lunge seen from below (own photo, restyled with AI)">
+            <img class="pop pa" src="assets/sanhee-pose.webp" alt="" aria-hidden="true">
+            <img class="pop pb" src="assets/sanhee-pose.webp" alt="" aria-hidden="true">
+            <span class="scan" aria-hidden="true"></span>
+          </div>
+          <span class="sweep" aria-hidden="true"></span>
+        </div>
+      </div>
+      <svg class="wires" id="wires" aria-hidden="true"></svg>
+      <ol class="calls" id="calls">
+        <li class="call" data-x="50" data-y="21" data-side="l"><span class="k"><span>ROLE</span><i>01</i></span><b>Brand &amp; visual<br>designer.</b></li>
+        <li class="call" data-x="38" data-y="11" data-side="l"><span class="k"><span>SIGNATURE</span><i>02</i></span><b>Monochrome. Editorial.<br>Chrome.</b></li>
+        <li class="call" data-x="82" data-y="5" data-side="r"><span class="k"><span>METHOD</span><i>03</i></span><b>From first concept<br>to a live site.</b></li>
+        <li class="call" data-x="57" data-y="31" data-side="r"><span class="k"><span>STATUS</span><i>04</i></span><b>Open to roles<br>&amp; collaboration.</b></li>
+        <li class="call" data-x="51" data-y="69" data-side="l"><span class="k"><span>TOOLS</span><i>05</i></span><b>Figma, Blender, AI.<br>Always disclosed.</b></li>
+        <li class="call" data-x="84" data-y="87" data-side="r"><span class="k"><span>BASE</span><i>06</i></span><b>Daejeon, Korea.<br>Remote-ready.</b></li>
+      </ol>
+      <div class="ana-bot">
+        <ul class="contact">
+          <li><span id="mail">alonewd0@gmail.com</span><button class="copy" id="copyMail" type="button">COPY</button></li>
+          <li><a href="https://www.linkedin.com/in/sanhee-lee-2b123b3aa" target="_blank" rel="noopener">LinkedIn ↗</a> · <a href="https://www.behance.net/onewo1" target="_blank" rel="noopener">Behance ↗</a></li>
+        </ul>
+        <a class="pdf" href="resume.pdf" target="_blank" rel="noopener"><b>PDF</b><span>RESUME ↓</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="record" aria-label="Record">
+    <div class="rec">
+      <span class="hl-label">EXPERIENCE</span>
+      <ol class="exp">
+        <li><span class="d">2026.09—NOW</span><span><b>Freelance Brand &amp; Web Designer</b> <span class="o">AURA SEOUL (self-employed) · remote</span></span></li>
+        <li><span class="d">2026.06—08</span><span><b>Expense Audit Assistant</b> <span class="o">Daejeon Election Commission</span></span></li>
+        <li><span class="d">2026.05—06</span><span><b>Research Data Labeling Assistant</b> <span class="o">LigaChem Biosciences</span></span></li>
+        <li><span class="d">2025.09—26.02</span><span><b>Office Support</b> <span class="o">Duol</span></span></li>
+        <li><span class="d">2023.12—24.01</span><span><b>Client Reception</b> <span class="o">Shinhan Bank PWM Center</span></span></li>
+        <li><span class="d">2023.10—12</span><span><b>Data Center Operations Support</b> <span class="o">NAVER Data Center GAK Sejong</span></span></li>
+      </ol>
+    </div>
+    <div class="rec">
+      <span class="hl-label">EDUCATION</span>
+      <ul class="mini">
+        <li><span>2024 — 2025</span><b>BBA · Edu-Up Lifelong Education Center (Academic Credit Bank)</b></li>
+        <li><span>2022 — 2024</span><b>Emergency Medical Technology · Daejeon University (no degree)</b></li>
+      </ul>
+      <span class="hl-label">CERT · LANGUAGE</span>
+      <ul class="mini">
+        <li><span>2025</span>SMAT Level 1</li>
+        <li><span>LANG</span><b>Korean native · English, Japanese conversational</b></li>
+      </ul>
+    </div>
+    <div class="rec">
+      <span class="hl-label">SKILLS</span>
+      <div class="chips"><span>Brand Identity</span><span>Visual Systems</span><span>Brand Guidelines</span><span>Art Direction</span><span>Web Design</span><span>Landing Pages</span><span>Responsive Layout</span></div>
+      <span class="hl-label">TOOLS</span>
+      <div class="chips fill"><span>Figma</span><span>Blender</span><span>Midjourney</span><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Vercel</span><span>Supabase</span></div>
+    </div>
+  </div>
+  <p class="ai">AI tools are part of my workflow. Where images, video or code are AI-generated, each project says so. The portraits on this page are my own photo, restyled with AI; the iris at the end of the eye zoom is drawn in code.</p>
+</section>
+</main>
+
+<footer class="foot wrap">
+  <div style="display:grid; gap:6px;"><span class="label">BE MY AURA</span><span class="meta">A specimen archive in a pale fog · 2026</span></div>
+  <div style="display:grid; gap:6px; justify-items:end;"><div class="code" aria-hidden="true"></div><span class="meta">0713 2026 0026</span></div>
+</footer>
+<script>
+/* KO / EN switch shared by every page. Any element with data-ko / data-en gets swapped. */
+(function () {
+  let lang = 'ko';
+  try { const s = localStorage.getItem('bma-lang'); if (s === 'ko' || s === 'en') lang = s; } catch (e) {}
+  function apply(l) {
+    lang = l; document.documentElement.lang = l;
+    document.querySelectorAll('[data-ko]').forEach((el) => { const v = el.dataset[l]; if (v != null) el.innerHTML = v; });
+    document.querySelectorAll('.lang span').forEach((s) => s.classList.toggle('on', s.dataset.l === l));
+    try { localStorage.setItem('bma-lang', l); } catch (e) {}
+    document.dispatchEvent(new CustomEvent('bma-lang', { detail: l }));
+  }
+  window.BMA_LANG = () => lang;
+  document.querySelectorAll('.lang').forEach((b) => b.addEventListener('click', () => apply(lang === 'ko' ? 'en' : 'ko')));
+  apply(lang);
+})();
+</script>
+
+<script>document.documentElement.lang = "en";</script>
+<script>
+(() => {
+  const $ = (s) => document.querySelector(s);
+  const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+  const ss = (a, b, x) => { const t = clamp((x - a) / (b - a)); return t * t * (3 - 2 * t); };
+  const mix = (a, b, t) => a + (b - a) * t;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const intro = $('#intro'), poster = $('#poster'), nav = $('#nav'), hud = $('#hud');
+  const canvas = $('#eye'), scope = $('#scope'), enter = $('#enter'), fb = $('#eyeFb');
+  const magEl = $('#mag'), phaseEl = $('#phase'), barEl = $('#bar');
+
+  /* source geometry of the 4K close-up (sanhee-face.jpg is the same frame at 1600 px; sanhee-eye.jpg is a native 1024 crop) */
+  const SRC = [3712, 4608], PUPIL = [1314, 1434], IRIS_R = 104, PUPIL_R = 53, EYE_RECT = [805, 943, 1829, 1967];
+
+  let tx = 0, ty = 0, mx = 0, my = 0;
+  addEventListener('pointermove', (e) => { tx = e.clientX / innerWidth * 2 - 1; ty = e.clientY / innerHeight * 2 - 1; }, { passive: true });
+
+  const progress = () => { const r = intro.getBoundingClientRect(); const span = intro.offsetHeight - innerHeight; return span > 0 ? clamp(-r.top / span) : 0; };
+
+  /* ── WebGL eye ── */
+  const gl = reduce ? null : canvas.getContext('webgl', { antialias: false, alpha: false, premultipliedAlpha: false });
+  let prog, U = {}, ready = 0;
+  if (!gl && !reduce) { canvas.style.display = 'none'; fb.style.display = 'block'; }
+  if (gl) {
+    const vs = 'attribute vec2 p; void main(){ gl_Position = vec4(p, 0.0, 1.0); }';
+    const fs = `precision highp float;
+uniform sampler2D uFace, uEye, uFig;
+uniform vec2 uRes, uC, uP, uM;
+uniform float uK, uIris, uPR, uDark, uTime, uZ, uFigOn;
+const vec2 S = vec2(${SRC[0]}.0, ${SRC[1]}.0);
+const vec4 ER = vec4(${EYE_RECT.join('.0, ')}.0);
+const float IR = ${IRIS_R}.0;
+float hash(vec2 p){ p = fract(p * vec2(123.34, 456.21)); p += dot(p, p + 45.32); return fract(p.x * p.y); }
+float pn(vec2 p, float per){ vec2 i = floor(p), f = fract(p); f = f * f * (3.0 - 2.0 * f);
+  float a = mod(i.x, per), b = mod(i.x + 1.0, per);
+  return mix(mix(hash(vec2(a, i.y)), hash(vec2(b, i.y)), f.x), mix(hash(vec2(a, i.y + 1.0)), hash(vec2(b, i.y + 1.0)), f.x), f.y); }
+float pfbm(vec2 p, float per){ float v = 0.0, a = 0.5; for (int i = 0; i < 5; i++){ v += a * pn(p, per); p *= 2.0; per *= 2.0; a *= 0.5; } return v; }
+vec3 photo(vec2 q){
+  vec3 c = texture2D(uFace, clamp(q / S, 0.0, 1.0)).rgb;
+  vec2 e = (q - ER.xy) / (ER.zw - ER.xy);
+  float m = smoothstep(0.0, 0.08, e.x) * smoothstep(0.0, 0.08, 1.0 - e.x) * smoothstep(0.0, 0.08, e.y) * smoothstep(0.0, 0.08, 1.0 - e.y);
+  if (m > 0.0) c = mix(c, texture2D(uEye, clamp(e, 0.0, 1.0)).rgb, m);
+  return c;
+}
+vec3 iris(vec2 d, float pr){
+  float r = length(d);
+  float u = atan(d.y, d.x) / 6.2831853 + 0.5;
+  float rn = clamp((r - pr) / max(IR - pr, 1.0), 0.0, 1.0);
+  float f1 = pfbm(vec2(u * 48.0, r * 0.045), 48.0);
+  float f2 = pfbm(vec2(u * 160.0, r * 0.14 + 7.0), 160.0);
+  float f3 = pfbm(vec2(u * 512.0, r * 0.5 + 3.0), 512.0);
+  float fib = f1 * 0.45 + f2 * 0.35 + f3 * 0.2;
+  vec3 c = vec3(0.06, 0.065, 0.08) + vec3(0.31, 0.33, 0.38) * pow(fib, 1.9) * 1.8;
+  c += vec3(0.09) * smoothstep(0.1, 0.0, abs(rn - 0.3));
+  c *= mix(1.0, 0.28, smoothstep(0.7, 1.0, rn));
+  vec2 g = vec2(u * 260.0, r * 0.25); vec2 id = floor(g); vec2 fr = fract(g) - 0.5;
+  float h = hash(vec2(mod(id.x, 260.0), id.y));
+  c += step(0.93, h) * smoothstep(0.3, 0.0, length(fr)) * (0.5 + 0.5 * sin(uTime * 2.3 + h * 60.0)) * vec3(0.8, 0.86, 0.96);
+  c += vec3(0.22, 0.24, 0.29) * smoothstep(0.03, 0.0, abs(rn - 0.985));
+  return c;
+}
+void main(){
+  vec2 fp = vec2(gl_FragCoord.x, uRes.y - gl_FragCoord.y);
+  vec2 q = uC + (fp - 0.5 * uRes) / uK;
+  vec2 ca = (fp - 0.5 * uRes) / uRes.y * (0.8 + uZ * 3.0) / uK;
+  vec3 col = vec3(photo(q + ca).r, photo(q).g, photo(q - ca).b);
+  if (uIris > 0.001) {
+    vec2 P = uP + uM * 3.0 * uIris;
+    vec2 d = q - P; float r = length(d);
+    vec2 e = (q - ER.xy) / (ER.zw - ER.xy);
+    float lum = dot(texture2D(uEye, clamp(e, 0.0, 1.0)).rgb, vec3(0.299, 0.587, 0.114));
+    float m = uIris * smoothstep(IR + 3.0, IR - 3.0, r) * smoothstep(0.46, 0.30, lum);
+    col = mix(col, iris(d, uPR), m);
+    float soft = 1.5 + 2.0 / uK;
+    float pe = smoothstep(uPR + soft, uPR - soft, r);
+    vec3 pc = vec3(0.01, 0.013, 0.016);
+    float rr = r / max(uPR, 1.0);
+    vec2 dd = d * (1.0 - 0.12 * rr * rr);
+    float hgt = uPR * 1.55;
+    vec2 fu = vec2(0.5 - dd.x / (hgt * 1192.0 / 1900.0), 0.5 + dd.y / hgt);
+    if (fu.x > 0.0 && fu.x < 1.0 && fu.y > 0.0 && fu.y < 1.0) {
+      vec4 fc = texture2D(uFig, fu);
+      pc += fc.rgb * fc.a * vec3(0.55, 0.66, 0.85) * 0.42 * uFigOn;
+    }
+    vec2 cl = d / max(uPR, 1.0) - vec2(-0.32, -0.46);
+    pc += vec3(0.75, 0.82, 0.92) * 0.22 * smoothstep(0.2, 0.0, abs(length(cl * vec2(1.0, 1.7)) - 0.32)) * smoothstep(0.1, -0.3, cl.y) * uFigOn;
+    col = mix(col, pc, pe * smoothstep(0.0, 0.6, uIris));
+  }
+  float v = smoothstep(1.3, 0.25, length((fp - 0.5 * uRes) / uRes.y));
+  col *= mix(0.72, 1.0, v);
+  col = mix(col, vec3(dot(col, vec3(0.299, 0.587, 0.114))), 0.22) * vec3(0.96, 0.99, 1.04);
+  col += (hash(fp + fract(uTime * 7.0) * 113.0) - 0.5) * 0.05;
+  col = mix(col, vec3(230.0, 235.0, 238.0) / 255.0, uDark);
+  gl_FragColor = vec4(col, 1.0);
+}`;
+    const sh = (type, src) => { const s = gl.createShader(type); gl.shaderSource(s, src); gl.compileShader(s); if (!gl.getShaderParameter(s, gl.COMPILE_STATUS)) console.error(gl.getShaderInfoLog(s)); return s; };
+    prog = gl.createProgram(); gl.attachShader(prog, sh(gl.VERTEX_SHADER, vs)); gl.attachShader(prog, sh(gl.FRAGMENT_SHADER, fs)); gl.linkProgram(prog);
+    if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) console.error(gl.getProgramInfoLog(prog));
+    gl.useProgram(prog);
+    const buf = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, buf); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+    const loc = gl.getAttribLocation(prog, 'p'); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+    ['uFace', 'uEye', 'uFig', 'uRes', 'uC', 'uP', 'uM', 'uK', 'uIris', 'uPR', 'uDark', 'uTime', 'uZ', 'uFigOn'].forEach((n) => (U[n] = gl.getUniformLocation(prog, n)));
+    const load = (name, src, unit, pot) => {
+      const img = new Image(); img.decoding = 'async';
+      img.onload = () => {
+        const t = gl.createTexture(); gl.activeTexture(gl.TEXTURE0 + unit); gl.bindTexture(gl.TEXTURE_2D, t);
+        gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, img);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+        if (pot) { gl.generateMipmap(gl.TEXTURE_2D); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR); }
+        else gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+        gl.uniform1i(U[name], unit); ready++;
+      };
+      img.src = src;
+    };
+    load('uFace', 'assets/sanhee-face.jpg', 0, false);
+    load('uEye', 'assets/sanhee-eye.jpg', 1, true);
+    load('uFig', 'assets/sanhee-pose.webp', 2, false);
+  }
+  /* SANHEE LEE is sized to the screen: one wide line on landscape, SAN / HEE / LEE stacked on a phone */
+  function fitType() {
+    const tys = document.querySelectorAll('.ty');
+    tys.forEach((el) => el.style.setProperty('--fs', '100px'));
+    const r1 = document.querySelector('.ty-ink .r1');
+    const portrait = getComputedStyle(r1).flexDirection === 'column';
+    const parts = [...r1.children].map((c) => c.getBoundingClientRect().width);
+    const w = portrait ? Math.max(...parts) : parts.reduce((a, b) => a + b, 0);
+    const byW = 100 * innerWidth * (portrait ? 0.88 : 0.95) / w;
+    const lines = portrait ? 3 : 2, usable = innerHeight - 70;
+    const byH = usable / (lines * 0.9 * 1.22);                  // keep every line on screen
+    const fs = Math.min(byW, byH);
+    tys.forEach((el) => el.style.setProperty('--fs', fs.toFixed(1) + 'px'));
+  }
+
+  let W = 0, H = 0, dpr = 1;
+  function resize() {
+    fitType();
+    dpr = Math.min(devicePixelRatio || 1, innerWidth < 760 ? 2 : 1.5);
+    W = Math.round(canvas.clientWidth * dpr); H = Math.round(canvas.clientHeight * dpr);
+    if (gl && (canvas.width !== W || canvas.height !== H)) { canvas.width = W; canvas.height = H; gl.viewport(0, 0, W, H); }
+    layoutAna();
+  }
+
+  function drawEye(t, time) {
+    const z = ss(0.42, 0.86, t);
+    const k0 = Math.max(W / SRC[0], H / SRC[1]);
+    const C0 = [SRC[0] / 2, 1980];
+    const kEnd = (0.5 * Math.hypot(W, H)) / IRIS_R * 1.06;
+    const ez = z * z * (3 - 2 * z);
+    const K = k0 * Math.pow(Math.max(kEnd / k0, 1), ez);
+    const s0 = [W / 2 + (PUPIL[0] - C0[0]) * k0, H / 2 + (PUPIL[1] - C0[1]) * k0];
+    const f = ss(0, 0.45, z);
+    const s = [mix(s0[0], W / 2, f), mix(s0[1], H / 2, f)];
+    const C = [PUPIL[0] - (s[0] - W / 2) / K, PUPIL[1] - (s[1] - H / 2) / K];
+    const dil = ss(0.76, 0.93, t);
+    gl.uniform2f(U.uRes, W, H); gl.uniform2f(U.uC, C[0], C[1]); gl.uniform2f(U.uP, PUPIL[0], PUPIL[1]);
+    gl.uniform2f(U.uM, mx, my); gl.uniform1f(U.uK, K); gl.uniform1f(U.uIris, ss(1.15, 3.2, K));
+    gl.uniform1f(U.uPR, PUPIL_R * (1 + 15 * dil * dil));
+    gl.uniform1f(U.uDark, ss(0.9, 0.965, t)); gl.uniform1f(U.uTime, time); gl.uniform1f(U.uZ, z); gl.uniform1f(U.uFigOn, ss(0.6, 0.9, z));
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+    return K / k0;
+  }
+
+  /* ── the analysis: nodes on the body, wires out to six short readings, revealed by the scroll ── */
+  const ana = $('#ana'), apin = $('#anaPin'), subj = $('#subj'), wires = $('#wires'), anaPct = $('#anaPct');
+  let P0 = null;
+  const calls = [...document.querySelectorAll('.call')];
+  let anaStatic = false, geo = [];
+  calls.forEach((c, i) => {
+    const n = document.createElement('span'); n.className = 'node'; n.setAttribute('aria-hidden', 'true');
+    n.style.left = c.dataset.x + '%'; n.style.top = c.dataset.y + '%'; n.innerHTML = '<em>0' + (i + 1) + '</em>';
+    subj.appendChild(n); c._node = n;
+  });
+  function layoutAna() {
+    anaStatic = reduce || innerWidth < 1000 || innerHeight < 560;
+    ana.classList.toggle('static', anaStatic);
+    wires.innerHTML = ''; geo = [];
+    calls.forEach((c) => { c.style.left = c.style.top = c.style.right = ''; if (anaStatic) { c.style.removeProperty('--k'); c._node.style.removeProperty('--n'); } });
+    if (anaStatic) { ['--r', '--c'].forEach((v) => apin.style.removeProperty(v)); anaPct.textContent = 'SCAN 100%'; return; }
+    const P = apin.getBoundingClientRect(), F = $('#anaFrame').getBoundingClientRect();
+    const top = P.height * 0.27, bot = P.height * 0.82, gutter = innerWidth * 0.03;
+    ['l', 'r'].forEach((side) => {
+      const arr = calls.filter((c) => c.dataset.side === side).map((c) => {
+        const r = c._node.getBoundingClientRect();
+        return { c, nx: r.left + r.width / 2 - P.left, ny: r.top + r.height / 2 - P.top };
+      }).sort((a, b) => a.ny - b.ny);
+      arr.forEach((o, j) => {
+        const h = o.c.offsetHeight, w = o.c.offsetWidth;
+        const cy = top + (j + 0.5) * (bot - top) / arr.length;
+        const x0 = side === 'l' ? gutter : P.width - gutter - w;
+        o.c.style.left = x0 + 'px'; o.c.style.top = (cy - 10) + 'px';
+        const edge = side === 'l' ? x0 + w + 10 : x0 - 10;
+        const rail = side === 'l' ? F.left - P.left - 30 - j * 8 : F.right - P.left + 30 + j * 8;
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        wires.appendChild(path);
+        geo.push({ c: o.c, path, edge, rail, cy: cy - 10, len: 1 });
+      });
+    });
+    geo.sort((a, b) => calls.indexOf(a.c) - calls.indexOf(b.c));
+    P0 = P;
+    drawWires(0);
+  }
+  function drawWires(q) {
+    if (!P0) return;
+    const P = apin.getBoundingClientRect();
+    geo.forEach((g, i) => {
+      const r = g.c._node.getBoundingClientRect();
+      const nx = r.left + r.width / 2 - P.left, ny = r.top + r.height / 2 - P.top;
+      g.path.setAttribute('d', `M${nx.toFixed(1)} ${ny.toFixed(1)} H${g.rail.toFixed(1)} V${g.cy.toFixed(1)} H${g.edge.toFixed(1)}`);
+      g.len = g.path.getTotalLength();
+      const s0 = 0.17 + i * 0.105;
+      g.path.style.strokeDasharray = g.len.toFixed(1);
+      g.path.style.strokeDashoffset = (g.len * (1 - ss(s0, s0 + 0.05, q))).toFixed(1);
+    });
+  }
+  function anaFrame() {
+    if (anaStatic) return;
+    const r = ana.getBoundingClientRect();
+    if (r.bottom < 0 || r.top > innerHeight) return;
+    const q = clamp(-r.top / (ana.offsetHeight - innerHeight));
+    apin.style.setProperty('--mx', mx.toFixed(4)); apin.style.setProperty('--my', my.toFixed(4));
+    apin.style.setProperty('--b', Math.sin(performance.now() / 1000 * 1.1).toFixed(4));
+    apin.style.setProperty('--h', ss(0.12, 0.95, q).toFixed(4));
+    apin.style.setProperty('--r', ss(0, 0.16, q).toFixed(4));
+    apin.style.setProperty('--c', ss(0.84, 0.93, q).toFixed(4));
+    geo.forEach((g, i) => {
+      const s0 = 0.17 + i * 0.105;
+      g.c._node.style.setProperty('--n', ss(s0 - 0.015, s0 + 0.01, q).toFixed(3));
+      g.c.style.setProperty('--k', ss(s0 + 0.035, s0 + 0.09, q).toFixed(3));
+    });
+    drawWires(q);
+    anaPct.textContent = 'SCAN ' + String(Math.round(q * 100)).padStart(3, '0') + '%';
+  }
+  addEventListener('resize', resize);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => { fitType(); layoutAna(); });
+  subj.querySelector('img.body').addEventListener('load', layoutAna);
+  resize();
+
+  /* ── copy e-mail ── */
+  $('#copyMail').addEventListener('click', (e) => {
+    const b = e.currentTarget, txt = $('#mail').textContent.trim();
+    const done = (ok) => { b.textContent = ok ? 'COPIED' : 'SELECTED'; setTimeout(() => (b.textContent = 'COPY'), 1600); };
+    const sel = () => { const r = document.createRange(); r.selectNodeContents($('#mail')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+    try { navigator.clipboard.writeText(txt).then(() => done(true), () => { sel(); done(false); }); } catch (_) { sel(); done(false); }
+  });
+
+  /* ── frame loop ── */
+  let introOn = true;
+  new IntersectionObserver(([e]) => (introOn = e.isIntersecting)).observe(intro);
+  function frame(now) {
+    requestAnimationFrame(frame);
+    const time = now / 1000;
+    mx += (tx - mx) * 0.06; my += (ty - my) * 0.06;
+    const t = reduce ? 0 : progress();
+    anaFrame();
+    if (!introOn || reduce) return;
+    const p1 = ss(0, 0.28, t), p2 = ss(0.24, 0.4, t), pf = ss(0.33, 0.41, t);
+    const st = poster.style;
+    st.setProperty('--mx', mx.toFixed(4)); st.setProperty('--my', my.toFixed(4));
+    st.setProperty('--p1', p1.toFixed(4)); st.setProperty('--p2', p2.toFixed(4)); st.setProperty('--pf', pf.toFixed(4));
+    st.setProperty('--fl', Math.sin(time * 0.9).toFixed(4));
+    st.visibility = pf >= 1 ? 'hidden' : 'visible';
+    const showEye = ss(0.3, 0.38, t);
+    scope.style.opacity = (ss(0.4, 0.46, t) * (1 - ss(0.86, 0.92, t))).toFixed(3);
+    enter.style.opacity = ss(0.92, 0.97, t).toFixed(3);
+    barEl.style.width = (ss(0.42, 0.9, t) * 100).toFixed(1) + '%';
+    phaseEl.textContent = t < 0.55 ? 'FOCUS LOCK' : t < 0.76 ? 'IRIS SCAN' : 'PUPIL OPEN';
+    if (gl) {
+      canvas.style.opacity = showEye.toFixed(3);
+      if (showEye > 0 && ready === 3) magEl.textContent = 'MAG ×' + drawEye(t, time).toFixed(1);
+    } else {
+      fb.style.opacity = showEye.toFixed(3);
+      const z = ss(0.42, 0.9, t), s = 1 + z * z * 14;
+      fb.style.transform = `scale(${s.toFixed(3)})`;
+      fb.style.filter = `brightness(${(1 - ss(0.8, 0.95, t)).toFixed(3)})`;
+      magEl.textContent = 'MAG ×' + s.toFixed(1);
+    }
+  }
+  requestAnimationFrame(frame);
+})();
+</script>
+</body>
+</html>
