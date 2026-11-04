@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;600&family=Instrument+Serif:ital@0;1&display=swap">
 <style>
-/* Layout: one cold, pale void. A scroll-scrubbed film of the persona reaching out fills the screen; the title sits behind her (keyed from the pale fog); a bone serpent and chrome thorns move in front through real depth. Single cold look by design. */
+/* Layout: one cold, pale void. A scroll-scrubbed film of the persona reaching out fills the screen; the title sits behind her (keyed from the pale fog); ice motes drift in front of her through real depth. Single cold look by design. */
 :root {
   --void: #B9C6CE;
   --void-deep: #C9D2D8;
@@ -330,7 +330,7 @@ const chapters = [
   { t: '01 — DESCENT', s: 'SPEC-002 · SAN' },
   { t: '02 — UNFURLING', s: 'LIMBS · HALO · 34 SPINES' },
   { t: '03 — CONTACT', s: 'THE HAND REACHES YOU' },
-  { t: '04 — OBSERVATION', s: 'X-RAY · SPEC-001 AURI' }
+  { t: '04 — OBSERVATION', s: 'X-RAY · SPEC-002 SAN' }
 ];
 let chIdx = 0, decodeTimer = 0;
 function setChapter(i) {
@@ -478,22 +478,18 @@ function start() {
   }
   function nearest(i) { for (let k = 0; k < frameImgs.length; k++) { if (frameImgs[i - k]) return frameImgs[i - k]; if (frameImgs[i + k]) return frameImgs[i + k]; } return null; }
 
-  /* ---- layer 2: 3D in front (serpent, thorns, ice motes) ---- */
+  /* ---- layer 2: 3D in front (ice motes; the bone serpent was removed) ---- */
   const scene = new THREE.Scene();
   scene.environment = new THREE.PMREMGenerator(renderer).fromScene(new RoomEnvironment(), .04).texture;
   const camera = new THREE.PerspectiveCamera(32, 1, .1, 100); camera.position.set(0, 0, 14);
   const key = new THREE.DirectionalLight(0xe8f2f8, 2.2); key.position.set(-4, 9, 8); scene.add(key);
   const rim = new THREE.DirectionalLight(0x9fd0e2, 1.6); rim.position.set(6, -2, -5); scene.add(rim);
 
-  const bone = new THREE.MeshPhysicalMaterial({ color: 0xF3F1EC, emissive: 0x3a3e42, roughness: .45, metalness: .05, clearcoat: .35, clearcoatRoughness: .3, iridescence: .2, iridescenceIOR: 1.3 });
+  const bone = new THREE.MeshPhysicalMaterial({ color: 0xE6E2D8, roughness: .3, metalness: .25, clearcoat: .8, clearcoatRoughness: .2, iridescence: .35, iridescenceIOR: 1.3 });
   const boneDS = bone.clone(); boneDS.side = THREE.DoubleSide;
   const chrome = new THREE.MeshPhysicalMaterial({ color: 0xeef4f7, roughness: .22, metalness: .85, clearcoat: .6 });
   const socket = new THREE.MeshStandardMaterial({ color: 0x0c0e10, roughness: .4, metalness: .6 });
   const iceGlow = new THREE.MeshStandardMaterial({ color: 0x9fd8ec, emissive: 0x6fc2de, emissiveIntensity: 1.6, roughness: .3 });
-  // the serpent is pale and see-through: only its front surface is drawn, at reduced opacity (depth pre-pass in frame())
-  const GHOST = .42;
-  for (const m of [bone, boneDS, chrome, socket, iceGlow]) { m.transparent = true; m.opacity = GHOST; }
-  const depthOnly = new THREE.MeshBasicMaterial({ colorWrite: false });
 
   // ice motes: depth particles that rush past as she reaches
   const MOTES = 260;
@@ -512,21 +508,19 @@ function start() {
   const tm = new THREE.Matrix4(), tq = new THREE.Quaternion(), tp = new THREE.Vector3(), ts = new THREE.Vector3(), tDir = new THREE.Vector3(), zAxis = new THREE.Vector3(0, 0, 1);
 
   // serpent
-  const N = 150, SEG0 = .062, VS = .7;   // vertebra count, spacing, vertebra scale
+  const N = 130, SEG0 = .09;
   const parts = [];
   { const c = new THREE.CylinderGeometry(.07, .082, .1, 10, 1); c.rotateX(Math.PI / 2); parts.push(c); }
   { const s = new THREE.SphereGeometry(.058, 12, 8); s.translate(0, 0, .055); parts.push(s); }
   { const n = new THREE.ConeGeometry(.024, .13, 6); n.translate(0, .115, 0); n.rotateX(-.45); parts.push(n); }
   { const t = new THREE.CylinderGeometry(.016, .008, .24, 6); t.rotateZ(Math.PI / 2); t.translate(0, .025, -.01); parts.push(t); }
   { const z = new THREE.ConeGeometry(.02, .07, 5); z.rotateX(Math.PI / 2); z.translate(.045, .06, -.05); parts.push(z); const z2 = z.clone(); z2.translate(-.09, 0, 0); parts.push(z2); }
-  const vGeo = mergeGeometries(parts.map(g => g.toNonIndexed())); vGeo.scale(VS, VS, VS);
-  const verts = new THREE.InstancedMesh(vGeo, bone, N); verts.instanceMatrix.setUsage(THREE.DynamicDrawUsage); scene.add(verts);
-  const ribCurve = new THREE.CatmullRomCurve3([new THREE.Vector3(.04, 0, 0), new THREE.Vector3(.15, .01, -.02), new THREE.Vector3(.25, -.09, -.05), new THREE.Vector3(.295, -.25, -.09), new THREE.Vector3(.25, -.41, -.13), new THREE.Vector3(.14, -.52, -.16), new THREE.Vector3(.04, -.555, -.17)]);
-  const ribR = new THREE.TubeGeometry(ribCurve, 22, .017, 5, false); ribR.scale(VS, VS, VS); const ribL = ribR.clone(); ribL.scale(-1, 1, 1);
-  const RIB_FROM = 6, RIB_TO = Math.floor(N * .8), RIBS = RIB_TO - RIB_FROM;
+  const verts = new THREE.InstancedMesh(mergeGeometries(parts.map(g => g.toNonIndexed())), bone, N); verts.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
+  const ribCurve = new THREE.CatmullRomCurve3([new THREE.Vector3(.06, .02, 0), new THREE.Vector3(.2, .01, .015), new THREE.Vector3(.31, -.12, .04), new THREE.Vector3(.32, -.3, .07), new THREE.Vector3(.24, -.45, .09), new THREE.Vector3(.11, -.52, .1)]);
+  const ribR = new THREE.TubeGeometry(ribCurve, 24, .0125, 5, false); const ribL = ribR.clone(); ribL.scale(-1, 1, 1);
+  const RIB_FROM = 5, RIB_TO = Math.floor(N * .74), RIBS = RIB_TO - RIB_FROM;
   const ribsR = new THREE.InstancedMesh(ribR, boneDS, RIBS), ribsL = new THREE.InstancedMesh(ribL, boneDS, RIBS);
-  for (const r of [ribsR, ribsL]) { r.instanceMatrix.setUsage(THREE.DynamicDrawUsage); r.frustumCulled = false; scene.add(r); }
-  verts.frustumCulled = false;
+  for (const r of [ribsR, ribsL]) r.instanceMatrix.setUsage(THREE.DynamicDrawUsage);
   const skull = new THREE.Group();
   { const cran = new THREE.Mesh(new THREE.SphereGeometry(1, 24, 16), bone); cran.scale.set(.15, .1, .24); cran.position.z = .03;
     const snout = new THREE.Mesh(new THREE.ConeGeometry(.1, .26, 12), bone); snout.rotation.x = Math.PI / 2; snout.scale.set(1, 1, .6); snout.position.z = .27;
@@ -538,10 +532,8 @@ function start() {
     const jl = new THREE.Mesh(jb, bone); jl.position.x = .07; jl.rotation.y = -.18; const jr = new THREE.Mesh(jb, bone); jr.position.x = -.07; jr.rotation.y = .18; jaw.add(jl, jr); jaw.position.set(0, -.06, -.08); skull.add(jaw);
     const fg = new THREE.ConeGeometry(.014, .11, 6); fg.rotateX(Math.PI); fg.translate(0, -.05, 0);
     const fL = new THREE.Mesh(fg, chrome); fL.position.set(.05, -.05, .3); fL.rotation.x = .4; const fR = fL.clone(); fR.position.x = -.05; skull.add(fL, fR); }
-  scene.add(skull);
 
   let G = 1, SEG = SEG0;
-  const BIG = 3.6;   // drawn far larger than life: a pale presence passing in front of her
   const head = new THREE.Vector3(-8, -2, 2), dir = new THREE.Vector3(1, .25, 0).normalize();
   let hist = [];
   const base = Array.from({ length: N }, () => new THREE.Vector3()), pos = Array.from({ length: N }, () => new THREE.Vector3());
@@ -558,7 +550,7 @@ function start() {
     visH = 2 * 14 * Math.tan(THREE.MathUtils.degToRad(16)); visW = visH * camera.aspect;
     twoLines = camera.aspect < .95; drawText();
     chest.set(0, -visH * .08, 1);
-    const prevG = G; G = (twoLines ? .62 : Math.min(1.25, Math.max(.8, visW / 13))) * BIG; SEG = SEG0 * G;
+    const prevG = G; G = twoLines ? .62 : Math.min(1.25, Math.max(.8, visW / 13)); SEG = SEG0 * G;
     if (!hist.length || Math.abs(G - prevG) > .02) initHist();
   }
 
@@ -580,18 +572,18 @@ function start() {
   function pickWander() { target.set((Math.random() * 2 - 1) * visW * .42, (Math.random() * 2 - 1) * visH * .34, (Math.random() * 2 - 1) * 2.6 + .6); }
   pickWander();
 
-  const T = new THREE.Vector3(), UU = new THREE.Vector3(), X = new THREE.Vector3(), refUp = new THREE.Vector3(0, .75, .65).normalize();
+  const T = new THREE.Vector3(), UU = new THREE.Vector3(), X = new THREE.Vector3(), refUp = new THREE.Vector3(0, .35, 1).normalize();
   const mB = new THREE.Matrix4(), q = new THREE.Quaternion(), qRoll = new THREE.Quaternion(), qLoc = new THREE.Quaternion(), qTmp = new THREE.Quaternion();
   const mOut = new THREE.Matrix4(), sc = new THREE.Vector3(), eul = new THREE.Euler();
   const frames = Array.from({ length: N }, () => ({ q: new THREE.Quaternion(), X: new THREE.Vector3() }));
-  const sizeAt = (i) => { const u = i / (N - 1); return Math.max(.12, .34 + .9 * Math.sin(Math.PI * (.1 + .9 * u)) * (1 - .62 * u)); };
+  const sizeAt = (i) => { const u = i / (N - 1); return Math.max(.16, .3 + .9 * Math.sin(Math.PI * (.1 + .9 * u)) * (1 - .5 * u)); };
   const clock = new THREE.Clock();
 
   function serpent(dt, t, coil, obs) {
-    const GM = Math.min(G, 2.4), speed = (reduce ? .25 : 1.1) * GM * (1 - obs * .5);
+    const speed = (reduce ? .25 : 1.1) * G * (1 - obs * .5);
     const active = inside && (t - lastMove) < 2.8 && coil < .5;
     if (coil >= .5) { const a = t * .8; target.set(Math.cos(a) * visW * .2, chest.y + Math.sin(a * 1.3) * visH * .2, 1 + Math.sin(a) * 2.6); }
-    else if (active) { ray.setFromCamera(ndc, camera); ray.ray.intersectPlane(plane, ptrW); target.set(ptrW.x + Math.cos(t * .7) * 1.1 * GM, ptrW.y + Math.sin(t * .7) * 1.1 * GM, Math.sin(t * .55) * 2.2 + .5); }
+    else if (active) { ray.setFromCamera(ndc, camera); ray.ray.intersectPlane(plane, ptrW); target.set(ptrW.x + Math.cos(t * .7) * 1.1 * G, ptrW.y + Math.sin(t * .7) * 1.1 * G, Math.sin(t * .55) * 2.2 + .5); }
     else if (head.distanceTo(target) < .7) pickWander();
     const des = target.clone().sub(head); if (des.lengthSq() > 1e-6) des.normalize();
     dir.lerp(des, 1 - Math.exp(-dt * (active || coil >= .5 ? 1.9 : 1.2))).normalize();
@@ -617,7 +609,7 @@ function start() {
     verts.instanceMatrix.needsUpdate = true;
     const ph = (t - pulseAt) * 34;
     for (let k = 0; k < RIBS; k++) {
-      const i = RIB_FROM + k, s = sizeAt(i) * G, fade = Math.min(1, k / 10, Math.pow(Math.max(0, RIBS - k) / 40, .6));
+      const i = RIB_FROM + k, s = sizeAt(i) * G, fade = Math.min(1, k / 6, (RIBS - k) / 14);
       let want = obs * .6 * (.5 + .5 * Math.sin(t * 2 - i * .2));
       if (active) { const d = Math.hypot(pos[i].x - ptrW.x, pos[i].y - ptrW.y) / G; want += THREE.MathUtils.smoothstep(1.9, .35, d); }
       const pd = i - ph; want += Math.exp(-(pd * pd) / 40) * .95;
@@ -629,7 +621,7 @@ function start() {
     }
     ribsR.instanceMatrix.needsUpdate = ribsL.instanceMatrix.needsUpdate = true;
     T.subVectors(base[0], base[2]).normalize();
-    skull.position.copy(pos[0]).addScaledVector(T, .12 * sizeAt(0) * G); skull.quaternion.copy(frames[0].q); skull.scale.setScalar(G * 1.1);
+    skull.position.copy(pos[0]).addScaledVector(T, .16 * sizeAt(0) * G); skull.quaternion.copy(frames[0].q); skull.scale.setScalar(G * 1.05);
     jaw.rotation.x = reduce ? .1 : .12 + .22 * Math.max(0, Math.sin(t * .9)) ** 6 + flare[RIB_FROM] * .3;
     $('head').textContent = `AURI ${head.x.toFixed(3)} / ${head.y.toFixed(3)} / ${head.z.toFixed(3)}`;
   }
@@ -704,7 +696,7 @@ function start() {
     U.par.value.y += ((-py * .012) - U.par.value.y) * Math.min(1, dt * 2.5);
     if (active) { ray.setFromCamera(ndc, camera); ray.ray.intersectPlane(plane, ptrW); }
     const coil = smooth(.48, .52, p) * (1 - smooth(.74, .78, p));
-    serpent(dt, t, coil, obs); swarm(dt, t, p, active); motesStep(dt, reach);
+    swarm(dt, t, p, active); motesStep(dt, reach);
     camera.position.x += ((px * 1.7) - camera.position.x) * Math.min(1, dt * 2);
     camera.position.y += ((py * 1.0) - camera.position.y) * Math.min(1, dt * 2);
     camera.position.z += ((14 - reach * 1.6 - obs * 1.8) - camera.position.z) * Math.min(1, dt * 2);
@@ -724,8 +716,6 @@ function start() {
     renderer.clear();
     renderer.render(filmScene, filmCam);
     renderer.clearDepth();
-    motes.visible = false; scene.overrideMaterial = depthOnly; renderer.render(scene, camera);
-    scene.overrideMaterial = null; motes.visible = true;
     renderer.render(scene, camera);
     requestAnimationFrame(frame);
   }
